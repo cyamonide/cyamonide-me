@@ -1,0 +1,22 @@
+{% extends 'iou/base.html' %}
+
+{% block content %}
+
+<div class="page-header">
+	<h1>Add other debt</h1>
+</div>
+
+<form method="POST" class="other-debt-form">{% csrf_token %}
+	{{ form.as_p }}
+	
+	<div id="group-selector">
+		<p class="no-label">
+			<input type="checkbox" name="is_group">Part of group</input>
+		</p>
+		{{ group_mc_form.as_p }}
+	</div>
+
+	<button type="submit" class="save btn btn-default">Save</button>
+</form>
+
+{% endblock %}
