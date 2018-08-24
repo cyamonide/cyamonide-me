@@ -13,6 +13,12 @@
 	<div class="col-sm-3">
 		<a class="btn btn-primary" href="{% url 'other_debt_add' %}" role="button">Add to others' debt</a>
 	</div>
+	<div class="col-sm-3">
+		<a class="btn btn-primary" href="{% url 'payment_out_add' %}" role="button">Add a payment out</a>
+	</div>
+	<div class="col-sm-3">
+		<a class="btn btn-primary" href="{% url 'payment_in_add' %}" role="button">Add a payment in</a>
+	</div>
 </div>
 
 {%for transaction in transactions %}

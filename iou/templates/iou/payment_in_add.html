@@ -3,10 +3,10 @@
 {% block content %}
 
 <div class="page-header">
-	<h1>Add my debt</h1>
+	<h1>Add a payment in</h1>
 </div>
 
-<form method="POST" class="my-debt-form">{% csrf_token %}
+<form method="POST" class="transaction-form" autocomplete="off">{% csrf_token %}
 	{{ form.as_p }}
 	<button type="submit" class="save btn btn-default">Save</button>
 </form>

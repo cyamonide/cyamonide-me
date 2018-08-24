@@ -23,7 +23,7 @@ def my_debt_add(request):
   else:
     form = MyDebtForm()
 
-  return render(request, 'iou/transaction_add.html', {'form': MyDebtForm})
+  return render(request, 'iou/my_debt_add.html', {'form': form})
 
 def other_debt_add(request):
   if request.method == "POST":
@@ -60,7 +60,7 @@ def other_debt_add(request):
     form = OtherDebtForm()
     group_mc_form = GroupMCForm()
 
-  return render(request, 'iou/other_debt_add.html', {'form': OtherDebtForm, 'group_mc_form': GroupMCForm})
+  return render(request, 'iou/other_debt_add.html', {'form': form, 'group_mc_form': group_mc_form})
 
 def payment_in_add(request):
   if request.method == "POST":
@@ -75,9 +75,9 @@ def payment_in_add(request):
       return redirect('transactions_list')
 
   else:
-    form = MyDebtForm()
+    form = PaymentInForm()
 
-  return render(request, 'iou/transaction_add.html', {'form': MyDebtForm})
+  return render(request, 'iou/payment_in_add.html', {'form': form})
 
 def payment_out_add(request):
   if request.method == "POST":
@@ -87,12 +87,12 @@ def payment_out_add(request):
       transaction.author = request.user
       transaction.save()
       person = Person.objects.filter(pk=transaction.party.pk)[0]
-      person.balance -= transaction.amount
+      person.balance += transaction.amount
       person.save()
       return redirect('transactions_list')
 
   else:
-    form = MyDebtForm()
+    form = PaymentOutForm()
 
-  return render(request, 'iou/transaction_add.html', {'form': MyDebtForm})
+  return render(request, 'iou/payment_out_add.html', {'form': form})
 
