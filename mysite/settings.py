@@ -39,8 +39,7 @@ INSTALLED_APPS = [
   'django.contrib.staticfiles',
 	'blog',
 	'iou',
-  'resume',
-  'easy_pdf',
+  'landing'
 ]
 
 MIDDLEWARE = [

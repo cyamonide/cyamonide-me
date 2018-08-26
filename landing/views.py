@@ -3,7 +3,7 @@ from django.http import FileResponse, Http404
 
 # Create your views here.
 
-def resume_view(request):
+def resume(request):
   try:
     return FileResponse(open('/home/cyamo/mysite/static/documents/resume.pdf', 'rb'), content_type='application/pdf')
   except FileNotFoundError:
