@@ -11,3 +11,6 @@ def resume(request):
     return FileResponse(open('/home/cyamo/mysite/static/documents/resume.pdf', 'rb'), content_type='application/pdf')
   except FileNotFoundError:
     raise Http404()
+
+def viewSiteTools(request):
+    return render(request, 'landing/what-i-use.html', {})
