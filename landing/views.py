@@ -12,5 +12,5 @@ def resume(request):
   except FileNotFoundError:
     raise Http404()
 
-def viewSiteTools(request):
+def view_site_tools(request):
     return render(request, 'landing/what-i-use.html', {})

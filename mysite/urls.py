@@ -20,4 +20,5 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('', include('landing.urls')),
 	path('iou/', include('iou.urls')),
+  path('notes/', include('notes.urls')),
 ]
