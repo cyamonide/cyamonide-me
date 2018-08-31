@@ -15,3 +15,6 @@ Personal website. About me, and platform for web app dev
 * Clear debt manually by rounding
 * Add ability to archive users
 * View transaction history for users
+#### Notes
+* Convert markdown notes to html if non existent
+* Create model linking html file to markdown file
