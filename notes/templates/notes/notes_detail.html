@@ -1,0 +1,12 @@
+{% extends 'notes/base.html' %}
+
+{% block header %}
+<h1>{{ note.title }}</h1><br>
+<h4>{{ note.date }} {{ note.course_code }}</h4>
+{% endblock %}
+
+{% block content %}
+<div class="md">
+	{% include note.template_name %}
+</div>
+{% endblock %}
