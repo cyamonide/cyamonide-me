@@ -1,0 +1,21 @@
+
+body * {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.link:hover {
+  background-color: #cce6ff;
+}
+
+.link:hover div p {
+  color: #ff8c00;
+}
+
+.link div {
+  padding: 2px;
+}
+
+.link div p {
+  margin: 0;
+}

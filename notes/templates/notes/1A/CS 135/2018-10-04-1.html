@@ -1,0 +1,48 @@
+<h1>Functions</h1>
+
+<h2>Thinking about list functions</h2>
+
+<p>What does the function produce in the base case? <br />
+What does the function do to the first element in a non-empty list? <br />
+How does the function combine the value produced from the first element with the value obtained by applying the function to the rest of the list?  </p>
+
+<p><strong>Recursive function</strong></p>
+
+<p>Function that calls itself from within.</p>
+
+<p>The full trace contains too much detail, so instead we use a <strong>condensed trace</strong> of the recursive function, which skips over trivial details.  </p>
+
+<h2>Design recipe for <code>(listof X)</code></h2>
+
+<p>```
+;; A (listof X) is one of:
+;; * empty
+;; (cons x (listof X) -> Any)</p>
+
+<p>(define (listof-X-template lox)
+    cond [(empty? lox) ...]
+             [else (... (first lox)... listof-X-template (rest lox))...])
+```</p>
+
+<h2>Filling in the templates</h2>
+
+<h2>Contracts for nonempty lists</h2>
+
+<ul>
+<li>Require that the list must be nonempty for the function in question</li>
+</ul>
+
+<hr>
+
+<h2>Strings and lists of characters</h2>
+
+<p>Racket notation for character <code>a</code> is <code>#\a</code>.  </p>
+
+<p>Racket has built in string and list conversion functions.</p>
+
+<p><code>
+(string-&gt;list "test")
+(cons #\t (cons #\e (cons #\s (cons #\t empty))))
+</code></p>
+
+<h2>List of structures</h2>

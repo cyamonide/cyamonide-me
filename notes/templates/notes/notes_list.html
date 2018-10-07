@@ -5,5 +5,31 @@
 {% endblock %}
 
 {% block content %}
-<p>All of my course notes. Coming soon.</p>
+<div class="row" class="link">
+	<div class="col-sm-2">
+		<p><b>Date</b></p>
+	</div>
+	<div class="col-sm-2">
+		<p><b>Course</b></p>
+	</div>
+	<div class="col-sm-8">
+		<p><b>Title</b></p>
+	</div>
+</div>
+{% for note in notes %}
+	<div class="link row">
+		<a href="https://cyamonide.me/notes/view_note/{{ note.course_code }}/{{ note.filename }}/">
+			<div class="col-sm-2">
+				<p>{{ note.date }}</p>
+			</div>
+			<div class="col-sm-2">
+				<p>{{ note.course_code }}</p>
+			</div>
+			<div class="col-sm-8">
+				<p>{{ note.filename }}</p>
+			</div>
+		</a>
+	</div>
+{% endfor %}
+</div>
 {% endblock %}

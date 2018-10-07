@@ -1,8 +1,7 @@
 {% extends 'notes/base.html' %}
 
 {% block header %}
-<h1>{{ note.title }}</h1><br>
-<h4>{{ note.date }} {{ note.course_code }}</h4>
+<a href="{% url 'notes-list' %}">&lt; Back to list</a>
 {% endblock %}
 
 {% block content %}

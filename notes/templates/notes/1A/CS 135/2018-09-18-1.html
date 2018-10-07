@@ -1,0 +1,87 @@
+<h2>Administravia</h2>
+
+<h2>Recap</h2>
+
+<p>Documentation is not a component of the design recipe.  </p>
+
+<p>Is the following a good purpose statement?
+<code>
+;; Purpose:
+;; (water-consumption time plants) produces the
+;; overall water consumption of a green house.
+</code>
+No, you could improve on:
+- arguments are kind of vague; would be helpful 
+- units of time?</p>
+
+<h2>Boolean variables</h2>
+
+<p>Example application of two boolean variables <code>x</code> and <code>y</code>:
+<code>
+(== x y)
+</code>
+The above is equivalent to determining whether the mathematical proposition 
+$x=y$ is true or false.  </p>
+
+<p>Standard Racket uses <code>#t</code> and <code>#true</code> where we use <code>true</code>  </p>
+
+<h3>Other types of comparisons</h3>
+
+<p><code>
+(&lt; x y)
+(&gt;= x y)
+</code></p>
+
+<p>Sample contract:
+<code>
+;; = : Num Num -&gt; Bool
+</code></p>
+
+<h3>Complex relationships</h3>
+
+<p>Racket provides keywords <code>and</code> <code>or</code> and <code>not</code>  </p>
+
+<p>DrRacket only evaluates as many arguments of <code>and</code> and <code>or</code> as is necessary to 
+determine the value. <br />
+i.e. a single <code>false</code> in <code>and</code> is conclusive, and a single <code>true</code> in <code>or</code> is 
+also conclusive.  </p>
+
+<h2>Predicates</h2>
+
+<p>A <strong>predicate</strong> is a function that produces a Boolean result. <br />
+Built-in predicates include <code>even?</code> <code>negative?</code> and <code>zero?</code>  </p>
+
+<p>We can write our own predicates too.
+<code>
+(define (between? ow high numb)
+    (and (&lt; low numb) (&lt; numb high)))
+</code></p>
+
+<h2>Symbols</h2>
+
+<p>Symbols can be compared using the function <code>symbol=?</code> <br />
+<code>
+(define my-symbol 'blue)
+(symbol=? my-symbol 'red) =&gt; false
+</code></p>
+
+<h2>Conditional expressions</h2>
+
+<ul>
+<li>conditional expressions use the special form <code>cond</code></li>
+<li>each argument is a question/answer pair</li>
+<li>the question is a boolean expression</li>
+</ul>
+
+<p><code>
+(cond [question1 answer1]
+[question2 answer2]
+[questionk answerk])
+</code>
+Where question k could be else. Once one of these questions are true, the 
+corresponding answer is evaluated.  </p>
+
+<p>Square brackets used by convention for readability.  </p>
+
+<p>$\sqrt(-1) mod pq = \sqrt(-1) mod p = \sqrt(-1) mod q$
+two smallest are 5 and 13, which means, necessarily, 5*13=65 exists</p>

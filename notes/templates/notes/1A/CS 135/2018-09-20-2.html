@@ -1,0 +1,98 @@
+<h2>Style and Semantics</h2>
+
+<ul>
+<li>A program has precise meaning and effect.</li>
+<li>A model of a programing language provides a way of describing the meaning of a program</li>
+<li>Typically this is done informally, by examples</li>
+<li>With Racket, we can do better</li>
+</ul>
+
+<h2>Spelling rules</h2>
+
+<ul>
+<li>Identifiers are names of constants, parameters, and user-defined functions</li>
+<li>Made up of letters, numbers, hyphens, underscores, and a few symbols</li>
+<li>Symbols start with <code>'</code></li>
+</ul>
+
+<h2>Syntax and grammar</h2>
+
+<p>There are three problems we need to address
+1. Syntax: the way we're allowed to say things.
+    - "?is This Sentence Syntactically Correct"
+2. Semantics: the meaning of what we say
+    - "Trombones fly hungrily."
+3. Ambiguity: valid sentences have exactly one meaning
+    - "Sally was given a book by Joyce"</p>
+
+<h2>Grammars</h2>
+
+<ul>
+<li>to enforce syntax and avoid ambiguity, we can use <em>grammars</em></li>
+<li>For example, an English sentence can be made up of a subject, verb, and object in that order</li>
+</ul>
+
+<h2>Semantic model</h2>
+
+<ul>
+<li>The second of our three problems we will solve rigorously with a semantic model</li>
+<li>A semantic model of a programming language provides a method of predicting the result of running any program</li>
+</ul>
+
+<h2>Syntax and Semantics</h2>
+
+<ul>
+<li>Remember stepping/substitution rules</li>
+</ul>
+
+<p>An example:
+<code>
+(define x 3) (define y (+ x 1)) y
+(define x 3) (define y (+ 3 1)) y
+(define x 3) (define y 4) y
+(define x 3) (define y 4) 4
+</code></p>
+
+<h2>Substitution in cond expressions</h2>
+
+<p>Three rules:
+- when the first expression is false
+- when the first expression is true
+- and when it is else</p>
+
+<p><code>
+(cond [false exp] ...) =&gt; (cond ...)
+(cond [true exp] ...) =&gt; exp.
+(cond [else exp]) =&gt; exp
+</code></p>
+
+<h2>Errors</h2>
+
+<p>A <strong>syntax error</strong> occurs when a sentence cannot be interpreted using the grammar. <br />
+A <strong>runtime error</strong> occurs when an expression cannot be reduced to a value by application of our (still incomplete) evaluation rules.  </p>
+
+<h2>Simplification for <code>and</code> and <code>or</code></h2>
+
+<p>```
+(and false ...) =&gt; false
+(and true ...) =&gt; (and ...)
+(and) =&gt; true</p>
+
+<p>(or true ...) =&gt; true
+(or false ...) =&gt; (or ...)
+(or) =&gt; false
+```</p>
+
+<h2>Substitution rules (so far)</h2>
+
+<ol>
+<li>Apply functions when all arguments are values</li>
+<li>When give na choice, evaluate the leftmost expression first</li>
+<li>(f v1 ... vn) =&gt; v when f is built-in
+<ul>
+<li>substitutes the result of a built-in function directly</li>
+</ul></li>
+<li>(f v1 ... vn) =&gt; exp when (define (f x1 ... xn) exp) occurs to the left</li>
+</ol>
+
+<h2>Importance of the model</h2>

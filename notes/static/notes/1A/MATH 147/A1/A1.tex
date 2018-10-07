@@ -1,0 +1,305 @@
+% M147 2018 A1
+\documentclass[12pt]{amsart}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\topmargin -0.4in
+\textheight 9.3in
+\textwidth 6in
+\oddsidemargin .25in
+\pagenumbering{gobble}
+
+\newcounter{exerci}
+\renewcommand{\theexerci}{\arabic{exerci}.}
+\newcounter{exercii}
+\renewcommand{\theexercii}{(\arabic{exerci}) }
+\newenvironment{Ex}{\begin{list}%
+ {\theexerci\hfill}{\usecounter{exerci}\rightmargin=0pt\leftmargin=12pt%
+ \labelwidth=12pt\labelsep=6pt\itemsep=2.5ex}}{\end{list}\medbreak}
+\newenvironment{parts}{\vspace{1ex}\begin{enumerate}\renewcommand{\itemsep}{.5ex}
+ \renewcommand{\labelenumi}{(\alph{enumi})}}{\end{enumerate}}
+\newcommand{\hint}{{\textbf{Hint:} }}
+\newcommand{\bN}{{\mathbb{N}}}
+\newcommand{\bQ}{{\mathbb{Q}}}
+\newcommand{\bR}{{\mathbb{R}}}
+\newcommand{\bZ}{{\mathbb{Z}}}
+\newcommand{\qfor}{\quad\text{for}\quad}
+
+\begin{document}
+\thispagestyle{empty}
+
+%%%%%%   TITLE   %%%%%%
+\begin{center}
+\textbf{\large Math 147 (Davidson: section 2) Assignment 1}\\[1ex]
+%Submit via CrowdMark by \underline{1:00 PM Friday, Sept. 14}. }\\[1ex]
+Simon Liu | 20765498\\
+\end{center}
+
+\vskip 1em
+\begin{Ex}
+
+\item 
+
+\begin{parts}
+\item If all parties are innocent, whoever states that another is certainly 
+guilty will be lying. Ed says that Fred did it for sure, and Ted says that at 
+least one other is guilty. \textbf{Ed and Fred are lying.}
+\item From Ed's statement, we deduce that Fred did it and Ted is innocent. Let 
+us denote propositions that Ed, Fred, and Ted did it with $E$, $F$, and $T$ 
+respectively.\\
+Ed states that Fred did it and Ted is innocent, so $F \wedge \neg T$.\\
+Ted's also states $\neg T$, and that at least one other is guilty, which Fred 
+satisfies.\\
+Lastly, since Fred states $E \Rightarrow T$ and we know $\neg T$, $\neg E$ so 
+Ed is not guilty.\\
+\textbf{Fred is the only guilty.}
+\item We will do casework based on Ed's guilt.\\
+
+\textit{Case 1: Ed is guilty.}\\
+Since Ed lies, we have $\neg F \wedge T$.\\
+Fred didn't do it, so he tells the truth. $E \Rightarrow T$.\\
+Since $T$, $E \Rightarrow T$ is always true.\\
+However, Ted lies, so he is not innocent and no others are guilty, which is 
+an invalid statement since Ed is guilty.\\
+
+\textit{Case 2: Ed is not guilty.}\\
+Since Ed tells the truth, $F \wedge \neg T$.\\
+Ted is innocent, so he states that he himself is innocent - a valid statement. 
+We can also deduce from Ted that at least one other person is guilty, which is
+true if Fred is guilty.\\
+Fred states that Ed's guilt does not imply Ted's. Ed is not guilty, so Fred's 
+statement has no effect.\\
+So, \textbf{Fred is the only guilty person.}
+
+\end{parts}
+
+\item Let $\theta = \alpha$ where $\sin{\alpha} = 5/13$ and $\cos{\alpha} = 12/13$. 
+We seek to show that this is when equality holds.
+\begin{align*}
+	|5 \sin{\alpha} + 12 \cos{\alpha}| &\le 13\\
+	|5(5/13) + 12(12/13)| &\le 13\\
+	\left|\frac{169}{13}\right| &\le 13\\
+	13 &= 13
+\end{align*}
+
+\pagebreak
+
+Now, let us express $\theta$ as angle $\alpha + \beta$ for some angle $\beta$. 
+Now, we have:
+\begin{align*}
+	|5\sin{(\alpha + \beta)} + 12\cos{(\alpha + \beta)}| &\le 13\\
+	|5(\sin{\alpha}\cos{\beta} + \sin{\beta}\cos{\alpha}) + 12(\cos{\alpha}\cos{\beta} - \sin{\alpha}\sin{\beta})| &\le 13\\
+	\left|5\left(\frac{5}{13}\cos{\beta} + \frac{12}{13}\sin{\beta}\right) + 12\left(\frac{12}{13}\cos{\beta} - \frac{5}{13}\sin{\beta}\right)\right| &\le 13\\
+	\left|\frac{25}{13}\cos{\beta} + \frac{60}{13}\sin{\beta} + \frac{144}{13}\cos{\beta} - \frac{60}{13}\sin{\beta}\right| &\le 13\\
+	|13\cos{\beta}| &\le 13\\
+	|\cos{\beta}| &\le 1\\
+\end{align*}
+which is true.
+
+\item Let $A = \log{a}$, $B = \log{b}$, and $C = \log{c}$.
+\begin{align*}
+	(\log_a{bc})(\log_b{ac})(\log_c{ab}) &= 
+	\left(\frac{\log{b}+\log{c}}{\log{a}}\right)
+	\left(\frac{\log{a}+\log{c}}{\log{b}}\right)
+	\left(\frac{\log{a}+\log{b}}{\log{c}}\right)\\
+	&= \left(\frac{B+C}{A}\right)\left(\frac{A+C}{B}\right)\left(\frac{A+B}{C}\right)\\
+	&= \frac{2ABC + A^2B + AB^2 + B^2C + BC^2 + A^2C + AC^2}{ABC}\\
+	&= 2 + \frac{A^2B + AB^2}{ABC} + \frac{B^2C + BC^2}{ABC} + \frac{A^2C + AC^2}{ABC}\\
+	&= 2 + \frac{A+B}{C} + \frac{B+C}{A} + \frac{A+C}{B}\\
+	&= 2 + \log_a{bc} + \log_b{ac} + \log_c{ab}
+\end{align*}
+
+\item \begin{itemize}
+
+\item[(a)\;] \begin{align*}
+	\frac{2ah}{4a^2+h} < \sqrt{a^2+h} - a < \frac{h}{2a}\\
+\end{align*}
+\begin{align*}
+	\sqrt{a^2+h}-a &= \frac{a^2+h-a^2}{\sqrt{a^2+h}+a}\\
+	&= \frac{h}{\sqrt{a^2+h}+a}\\
+\end{align*}
+
+\pagebreak
+
+Solving the upper bound,
+
+\begin{align*}
+	\frac{h}{\sqrt{a^2+h}+a} &< \frac{h}{2a}\\
+	2a &< \sqrt{a^2+h}+a\\
+	a^2 &< a^2+h\\
+	0 &< h.
+\end{align*}
+
+For the lower bound,
+
+\begin{align*}
+	\frac{2ah}{4a^2+h} &< \frac{h}{\sqrt{a^2+h}+a}\\
+	2a\sqrt{a^2+h}+2a^2 &< 4a^2+h\\
+	a^2+h &< \left(\frac{2a^2+h}{2a}\right)^2\\
+	a^2+h &< \frac{4a^4+h^2+4a^2h}{4a^2}\\
+	4a^4+4a^2h &< 4a^4 + h^2 + 4a^2h\\
+	0 &< h^2.
+\end{align*}
+
+\item[(b)\;] \begin{align*}
+	b-\sqrt{b^2-k} &= -(\sqrt{b^2-k}-b).
+\end{align*}
+
+From 4a,
+
+\begin{align*}
+	\frac{2ah}{4a^2+h} &< \sqrt{a^2+h}-a < \frac{h}{2a}\\
+	\frac{-2ah}{4a^2+h} &> a - \sqrt{a^2+h} > \frac{-h}{2a}\\
+\end{align*}
+
+Letting $a=b$ and $\sqrt{a^2+h} = \sqrt{b^2-k} \Rightarrow h=(-k)$,
+
+\begin{align*}
+	\frac{-2b(-k)}{4b^2+(-k)} &> b-\sqrt{b^2-k} > \frac{-(-k)}{2b}\\
+	\frac{2bk}{4b^2-k} &> b-\sqrt{b^2-k} > \frac{k}{2b}.
+\end{align*}
+
+\item[(c)\;] $\Delta_a = \sqrt{a^2+8}-a \rightarrow \text{(4 a) where } h=8$.
+\begin{align*}
+	\frac{2a(8)}{4a^2+8} &< \Delta_a < \frac{8}{2a}\\
+	\frac{4a}{a^2+2} &< \Delta_a < \frac{4}{a}\\
+	\frac{a^2+2}{4a} &> \frac{1}{\Delta_a} > \frac{a}{4}\\
+	\frac{a}{4} + \frac{1}{2a} &> \frac{1}{\Delta_a} > \frac{a}{4}.
+\end{align*}
+
+$\Delta_b = b - \sqrt{b^2-1} \rightarrow \text{(4 b) where } k=1$.
+\begin{align*}
+	\frac{2b(1)}{4b^2-1} &> \Delta_b > \frac{1}{2b}\\
+	\frac{4b^2-1}{2b} &< \frac{1}{\Delta_b} < 2b\\
+	2b - \frac{1}{2b} &< \frac{1}{\Delta_b} < 2b.
+\end{align*}
+
+Subtracting $\frac{1}{\Delta_b}$ from $\frac{1}{\Delta_a}$,
+\begin{align*}
+	\frac{a}{4}-2b+\frac{1}{2b} < \frac{1}{\Delta_a} - \frac{1}{\Delta_b} &< \frac{a}{4} + \frac{1}{2a} - 2b\\
+	\frac{1}{2b} < \left(\frac{1}{\Delta_a} - \frac{1}{\Delta_b}\right) - \left(\frac{a}{4} - 2b\right) &< \frac{1}{2a}\\
+\end{align*}
+
+Since $\frac{a}{4} =246913580.25$ and $2b = 246913578$, $\frac{a}{4} > 2b$, so $\left(\frac{a}{4}-2b\right) > 0$. Call this $m = \frac{a}{4} - 2b$.\\
+Our lower bound $\frac{1}{2b}$ is positive, so the middle expression must be positive. Note that we are subtracting a positive $m$ from $\frac{1}{\Delta_a} - \frac{1}{\Delta_b}$, so it follows that $\frac{1}{\Delta_a} - \frac{1}{\Delta_b}$ is positive, and
+\begin{align*}
+	\frac{1}{\Delta_a} &> \frac{1}{\Delta_b}\\
+	\Delta_a &< \Delta_b,\\
+\end{align*}
+so \textbf{$\Delta_b$ is larger.}\\
+
+I have not yet found a way to show that $|\Delta_a = \Delta_b| < 5\cdot 10^{-11}$ without substituting $a$ and $b$ and taking the difference of their individual bounds to get $|\Delta_a = \Delta_b| < 3.7\cdot 10^{-17}$.
+
+\end{itemize}
+
+\pagebreak
+
+\item \begin{parts}
+\item Let us split the real line into four disjoint intervals $x < -1$, $-1 < x < 0.5$, $0.5 < x < 1$, and $1 < x$.\\
+
+When $x < -1$, 
+\begin{align*}
+	f(x) &= |x-|x-1|| - |x-|x+1||\\
+	&= |x + x - 1| - |x + x + 1|\\
+	&= |2x - 1| - |2x + 1|\\
+	&= 1 - 2x + 2x + 1\\
+	&= 2
+\end{align*}
+
+When $-1 < x < 0.5$, 
+\begin{align*}
+	f(x) &= |x-|x-1|| - |x-|x+1||\\
+	&= |x + x - 1| - |x - x - 1|\\
+	&= |2x - 1| - |-1|\\
+	&= 1 - 2x - 1\\
+	&= -2x
+\end{align*}
+
+When $0.5 < x < 1$, 
+\begin{align*}
+	f(x) &= |x-|x-1|| - |x-|x+1||\\
+	&= |x + x - 1| - |x - x - 1|\\
+	&= |2x - 1| - |-1|\\
+	&= 2x - 1 - 1\\
+	&= 2x - 2
+\end{align*}
+
+When $1 < x$, 
+\begin{align*}
+	f(x) &= |x-|x-1|| - |x-|x+1||\\
+	&= |x - x + 1| - |x - x - 1|\\
+	&= |1| - |-1|\\
+	&= 1 - 1\\
+	&= 0
+\end{align*}
+
+\pagebreak
+
+\item $f(x)$ is not differentiable at $x = -1.0$, $x = 0.5$, and at $x = 1.0$ because $\forall a \in \{-1.0, 0.5, 1.0\}$, $\lim_{x \to a^+}f'(x) \neq \lim_{x \to a^-}f'(x)$.\\
+
+\begin{tikzpicture}[scale=2]
+	\draw[->] (-3,0) -- (3,0) node[right] {$x$};
+	\draw[->] (0,-3) -- (0,3) node[above] {$y$};
+	\draw[domain=-3:-1,smooth,variable=\x, red] plot ({\x},{2});
+	\draw[domain=-1:0.5,smooth,variable=\x, red] plot ({\x},{-2*\x});
+	\draw[domain=0.5:1,smooth,variable=\x, red] plot ({\x},{2*\x-2});
+	\draw[domain=1:3,smooth,variable=\x, red] plot ({\x},{0});
+	\draw[fill] (-2,0) circle [radius=0.025];
+	\draw[fill] (-1,0) circle [radius=0.025];
+	\draw[fill] (0,0) circle [radius=0.025];
+	\draw[fill] (1,0) circle [radius=0.025];
+	\draw[fill] (2,0) circle [radius=0.025];
+	\draw[fill] (0, -2) circle [radius=0.025];
+	\draw[fill] (0, -1) circle [radius=0.025];
+	\draw[fill] (0, 0) circle [radius=0.025];
+	\draw[fill] (0, 1) circle [radius=0.025];
+	\draw[fill] (0, 2) circle [radius=0.025];
+	\node [below] at (-1,0) {-1};
+	\node [above] at (1,0) {1};
+	\node [right] at (0,1) {1};
+	\node [right] at (0,2) {2};
+	\node [left] at (0,-1) {-1};
+\end{tikzpicture}
+
+\end{parts}
+
+\item We seek to prove that if $d \in \bN$ is not a perfect square, then $\sqrt{d}$ is irrational by contradiction.\\
+
+$\exists m \in \bZ^+$ s.t. $m^2 < d < (m+1)^2$.\\
+
+Assume that $\sqrt{d} \in \bQ$.\\
+
+If $\sqrt{d} \in \bQ$, let $A = \{n \in \bN : n\sqrt{d} \in \bN\}$.\\
+
+Also, let $a$ be the smallest member of $A$, and $b = \sqrt{d} - am$.\\
+
+First, observe that
+\begin{align*}
+	m^2 < d < (m+1)^2 &\Rightarrow m < \sqrt{d} < m+1\\
+	&\Rightarrow 0 < \sqrt{d}-m < 1.
+\end{align*}
+
+So,
+\begin{align*}
+	b &= a\sqrt{d}-am\\
+	&=a(\sqrt{d}-m)\\
+	&\Rightarrow b<a.
+\end{align*}
+
+Also, since $a\sqrt{d} \in \bN$ (by definition of set $A$), $a \in \bN$, and $m \in \bZ^+$, we know that $b=a\sqrt{d}+am\in\bN$.\\
+
+We now seek to show that $b \in \bN$ belongs in $A$.
+
+\begin{align*}
+	b\sqrt{d} &= (a\sqrt{d}+am)\sqrt{d}\\
+	&= ad + (a\sqrt{d})m
+\end{align*}
+
+Since all $ad$, $a\sqrt{d}$, and $m$ are elements of $\bN$, $b\sqrt{d} \in \bN$. So, $b$ must be an element of $A$.\\
+
+Originally, we assumed that $a$ is the least element in $A$. However, $b<a$ and $b \in A$. This is impossible.\\
+
+$\therefore \sqrt{d} \notin \bQ$ by contradiction. $\qed$
+
+\end{Ex}
+\end{document}
