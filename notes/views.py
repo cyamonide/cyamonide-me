@@ -3,7 +3,7 @@ from .models import NotesEntry
 
 # Create your views here.
 def notes_list(request):
-  notes = NotesEntry.objects.order_by('-date').order_by('course_code')
+  notes = NotesEntry.objects.order_by('course_code', '-date')
   return render(request, 'notes/notes_list.html', {'notes': notes})
 
 def notes_detail(request, course, filename):

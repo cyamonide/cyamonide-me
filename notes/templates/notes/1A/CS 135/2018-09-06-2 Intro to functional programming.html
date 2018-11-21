@@ -1,19 +1,13 @@
-<h1>2018-09-06-2 Introduction to functional programming</h1>
-
-<h2>Programming language design</h2>
-
-<p><strong>Imperative:</strong> based on frequent changes to data <br />
-Java, C++, Turing <br />
-<strong>Functional:</strong> based on the computation of new values rather than the transformation of old ones <br />
-Excel formulae, LISP, ML, Haskell, Erlang, F#  </p>
-
-<h2>Functional vs imperative</h2>
-
-<p>Functional and imperative programming share many concepts <br />
-They are completely different ways of thinking about solving problems  </p>
-
-<h2>Racket</h2>
-
+<h1 id="introduction-to-functional-programming">2018-09-06-2 Introduction to functional programming</h1>
+<h2 id="programming-language-design">Programming language design</h2>
+<p><strong>Imperative:</strong> based on frequent changes to data<br />
+Java, C++, Turing<br />
+<strong>Functional:</strong> based on the computation of new values rather than the transformation of old ones<br />
+Excel formulae, LISP, ML, Haskell, Erlang, F#</p>
+<h2 id="functional-vs-imperative">Functional vs imperative</h2>
+<p>Functional and imperative programming share many concepts<br />
+They are completely different ways of thinking about solving problems</p>
+<h2 id="racket">Racket</h2>
 <ul>
 <li>functional programming language</li>
 <li>minimal but powerful syntax</li>
@@ -21,29 +15,16 @@ They are completely different ways of thinking about solving problems  </p>
 <li>interactive emulator</li>
 <li>dialect of Scheme</li>
 </ul>
-
-<h2>Values, expressions, and functions</h2>
-
-<p><strong>Values</strong> are numbers or  other mathematical objects <br />
-e.g. $5, 4/9, \pi$ <br />
-<strong>Expressions</strong> combine values with <em>operators</em> and functions <br />
-e.g. $5 + 2, \sin{2\pi}$  </p>
-
-<p>Now, is $4/9$ four ninths or four divided by nine? Is it a value, or a value operator value?  </p>
-
+<h2 id="values-expressions-and-functions">Values, expressions, and functions</h2>
+<p><strong>Values</strong> are numbers or other mathematical objects<br />
+e.g. <span class="math inline">\(5, 4/9, \pi\)</span><br />
+<strong>Expressions</strong> combine values with <em>operators</em> and functions<br />
+e.g. <span class="math inline">\(5 + 2, \sin{2\pi}\)</span></p>
+<p>Now, is <span class="math inline">\(4/9\)</span> four ninths or four divided by nine? Is it a value, or a value operator value?</p>
 <p><strong>Functions</strong> generalize similar expressions.</p>
-
-<h2>Functions in mathematics</h2>
-
-<p>Consider the function definitions: $f(x) = x^2, g(x, y) = x + y$  </p>
-
-<p>These def'ns consist of:
-* the name of the function (e.g. $g$)
-* its parameters (e.g. $x, y$)
-* an algebraic expression using the parameters as placeholders for values to be supplied in the future</p>
-
+<h2 id="functions-in-mathematics">Functions in mathematics</h2>
+<p>Consider the function definitions: <span class="math inline">\(f(x) = x^2, g(x, y) = x + y\)</span></p>
+<p>These def'ns consist of: * the name of the function (e.g. <span class="math inline">\(g\)</span>) * its parameters (e.g. <span class="math inline">\(x, y\)</span>) * an algebraic expression using the parameters as placeholders for values to be supplied in the future</p>
 <p>An <strong>application</strong> of a function supplies arguments for the parameters, which are substituted into the algebraic expression.</p>
-
-<p>The arguments supplied may be themselves <em>applications</em>.  </p>
-
-<p>We <strong>evaluate</strong> each of the arguments to yield values.  </p>
+<p>The arguments supplied may be themselves <em>applications</em>.</p>
+<p>We <strong>evaluate</strong> each of the arguments to yield values.</p>

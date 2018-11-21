@@ -10,6 +10,7 @@ class NotesEntry(models.Model):
   filename = models.CharField(max_length=255, default='')
   converted = models.BooleanField(default=False)
   template_name = models.CharField(max_length=255, default='', blank=True)
+  color = models.CharField(max_length=7, default='#FFFFFF')
 
   def convert(self):
     # filename
@@ -20,7 +21,7 @@ class NotesEntry(models.Model):
     # html path
     htmlpath = '/home/cyamo/mysite/notes/templates/notes/1A/' + self.course_code + '/' + filename + '.html'
     # perform conversion
-    os.system('/home/cyamo/mysite/env/bin/markdown2 "' + mdpath + '" > "' + htmlpath + '"')
+    os.system('pandoc --mathjax "' + mdpath + '" -o "' + htmlpath + '"')
     self.template_name = 'notes/1A/' + self.course_code + '/' + filename + '.html'
     # update conversion status
     self.converted = True

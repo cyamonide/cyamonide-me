@@ -5,31 +5,33 @@
 {% endblock %}
 
 {% block content %}
-<div class="row" class="link">
-	<div class="col-sm-2">
-		<p><b>Date</b></p>
+
+<ul class="nav nav-tabs">
+	<li class="active"><a data-toggle="tab" href="#allnotes">All Notes</a></li>
+	<li><a data-toggle="tab" href="#menuECON206">ECON 206</a></li>
+	<li><a data-toggle="tab" href="#menuCS135">CS 135</a></li>
+</ul>
+
+<div class="tab-content">
+
+	<div id="allnotes" class="tab-pane in active">
+
+		{% include "notes/note_filtered_list.html" with filter=False %}
+
 	</div>
-	<div class="col-sm-2">
-		<p><b>Course</b></p>
+
+	<div id="menuECON206" class="tab-pane">
+
+		{% include "notes/note_filtered_list.html" with filter_course="ECON 206" filter=True %}
+
 	</div>
-	<div class="col-sm-8">
-		<p><b>Title</b></p>
+
+	<div id="menuCS135" class="tab-pane">
+
+		{% include "notes/note_filtered_list.html" with filter_course="CS 135" filter=True %}
+
 	</div>
+
 </div>
-{% for note in notes %}
-	<div class="link row">
-		<a href="https://cyamonide.me/notes/view_note/{{ note.course_code }}/{{ note.filename }}/">
-			<div class="col-sm-2">
-				<p>{{ note.date }}</p>
-			</div>
-			<div class="col-sm-2">
-				<p>{{ note.course_code }}</p>
-			</div>
-			<div class="col-sm-8">
-				<p>{{ note.filename }}</p>
-			</div>
-		</a>
-	</div>
-{% endfor %}
-</div>
+
 {% endblock %}

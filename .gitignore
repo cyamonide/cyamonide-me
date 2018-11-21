@@ -5,3 +5,6 @@ env
 db.sqlite3
 /static
 .DS_Store
+static/
+notes/templates/notes/1A/
+notes/static/notes/

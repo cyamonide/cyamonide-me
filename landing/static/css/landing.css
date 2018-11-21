@@ -12,6 +12,15 @@ body {
   max-width: 800px;
 }
 
+#home-button {
+  float: right;
+  margin-top: -40px;
+}
+
+#home-button span {
+  font-size: 26px;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
