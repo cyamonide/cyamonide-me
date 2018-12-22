@@ -1,0 +1,35 @@
+h1 a {
+	color: #FCA205;
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+.page-header, .content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+#home-button {
+  float: right;
+  margin-top: -40px;
+}
+
+#home-button span {
+  font-size: 26px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
+}
+
+.site-tools-list .col-sm-4 {
+  text-align: right;
+}

@@ -1,0 +1,40 @@
+body {
+  float: none;
+  margin: 0 auto;
+}
+
+.transaction-buttons {
+  padding-bottom: 20px;
+}
+
+.transaction-form p label {
+  width: 50%;
+  text-align: right;
+}
+
+.transaction-form p input[type="text"] {
+  width: 25%;
+}
+
+#group-selector p {
+  width: 50%;
+  text-align: right;
+  float: left;
+}
+
+#group-selector ul {
+  width: 50%;
+  float: right;
+  padding: 0 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.no-label {
+  margin-left: 50%;
+  text-align: left !important;
+}
+
+.no-label input {
+  margin-right: 10px;
+}
