@@ -1,0 +1,57 @@
+
+* {
+    transition: 0.25s ease;
+}
+
+.repo-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: 2px 2px #CCCCCC;
+    transform: translate(-2px, -2px);
+}
+
+.card-stats {
+    padding: 0 5px;
+}
+
+.card-stats div {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: grey;
+    padding: 0;
+}
+
+.card-stats div .fas {
+    color: black;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-body .row {
+    padding: 0;
+    margin: 0;
+}
+
+.repo-description {
+    padding: 0 15px;
+}
+
+.repo-graphic {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0 0 10px 0;
+}
+
+.repo-graphic img {
+    position: absolute;
+    height: 100%;
+}
