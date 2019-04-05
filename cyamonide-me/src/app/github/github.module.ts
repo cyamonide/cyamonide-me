@@ -7,6 +7,9 @@ import { GithubComponent } from './github.component';
   declarations: [CardComponent, GithubComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+      GithubComponent
   ]
 })
 export class GithubModule { }
