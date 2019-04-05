@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CardComponent } from './card/card.component';
+import { GithubComponent } from './github.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [CardComponent, GithubComponent],
   imports: [
     CommonModule
   ]
