@@ -1,4 +1,32 @@
 
+.subpage-title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.subpage-title hr {
+    height: 2px;
+    width: 50%;
+    background-color: #6e5494;
+}
+
+.subpage-info {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.subpage-header {
+    background-color: #6e549466;
+    padding: 10px;
+    margin: 0;
+}
+
+.repos-container {
+    background-color: #00000033;
+    padding: 30px;
+}
+
 .card-container {
     margin: 15px 0;
 }

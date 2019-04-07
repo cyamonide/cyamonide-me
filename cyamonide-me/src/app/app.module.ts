@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { GithubModule } from './github/github.module';
+import { HardwareModule } from './hardware/hardware.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { GithubModule } from './github/github.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GithubModule
+    GithubModule,
+    HardwareModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+
+.container {
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.screen-content {
+    color: green;
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    right: 8%;
+}
