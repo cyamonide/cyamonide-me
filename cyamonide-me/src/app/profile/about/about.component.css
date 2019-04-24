@@ -1,0 +1,27 @@
+.section-title hr {
+    background-color: #2377ff;
+}
+
+.section-content {
+    min-height: 300px;
+    text-align: justify;
+}
+
+.section-content p {
+    padding-left: 20px;
+}
+
+.section-content img {
+    float: left;
+    margin: 0 20px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.section-content:hover .fa-hand-paper {
+    transform: rotate(40deg);
+}
+
+.fa-hand-paper {
+    transform: rotate(20deg);
+}

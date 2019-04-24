@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|VT323');
+.section {
+    text-align: center;
+    padding: 10px 0;
+    /* background-color: #33d6bb55; */
+}
+
+.status-top {
+    margin: 10px 10px 0 10px;
+    background-color: #2377ff33;
+    border: solid #2377ff 2px;
+    border-bottom-width: 1px;
+    border-radius: 8px 8px 0 0;
+    font-size: 26px;
+    font-family: 'VT323', monospace;
+}
+
+.status-bottom {
+    margin: 0 10px 10px 10px;
+    background-color: #2377ff11;
+    border: solid #2377ff 2px;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #555;
+}
+
+.fa-file-alt {
+    transform: rotate(-5deg);
+}
+
+.col-md-6 a:hover {
+    text-decoration: none;
+}

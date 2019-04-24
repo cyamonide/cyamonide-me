@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { GithubModule } from './github/github.module';
 import { HardwareModule } from './hardware/hardware.module';
+import { ProfileModule } from './profile/profile.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,10 @@ import { HardwareModule } from './hardware/hardware.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ProfileModule,
     GithubModule,
-    HardwareModule
+    HardwareModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

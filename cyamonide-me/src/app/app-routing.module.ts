@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GithubComponent } from './github/github.component';
 import { HardwareComponent } from './hardware/hardware.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-    { path: 'card', component: GithubComponent },
+    { path: 'profile', component: ProfileComponent },
+    { path: 'github', component: GithubComponent },
     { path: 'hardware', component: HardwareComponent }
 ];
 

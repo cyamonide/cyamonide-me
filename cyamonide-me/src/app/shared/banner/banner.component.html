@@ -1,0 +1,11 @@
+<div class="banner-container">
+    <div class="row">
+        <div class="col-4" *ngFor="let widget of widgets">
+            <a href="{{widget.content[0]}}">
+                <div>
+                    <i class="{{widget.faIcon}}"></i><br>{{widget.title}}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

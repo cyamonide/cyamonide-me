@@ -1,8 +1,4 @@
 
-* {
-    transition: 0.25s ease;
-}
-
 .repo-link {
     text-decoration: none;
     color: black;
@@ -36,6 +32,11 @@
 
 .card-stats div .fas {
     color: black;
+    padding-right: 5px;
+}
+
+.fa-code-branch {
+    margin: 0 2px;
 }
 
 .card-body {

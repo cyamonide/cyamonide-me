@@ -1,0 +1,34 @@
+<div class="section">
+    <div class="container section-content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="status-top">
+                    Career status:
+                </div>
+                <div class="status-bottom">
+                    Software Engineering Intern @ Capital One<br>
+                    Searching for Jan 2020 co-op opportunities.<br>
+                    <a href="/resume"><i class="fas fa-file-alt"></i> Click here for resume.</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="status-top">
+                    Academic status:
+                </div>
+                <div class="status-bottom">
+                    Computer Science, Honours, Co-op<br>
+                    Bachelors of Computer Science (Data Science)<br>
+                    Taking electives in Economics.
+                </div>
+            </div>
+            <div class="col-md-6" *ngFor="let widget of widgets">
+                <div class="status-top">
+                    {{widget.title}}:
+                </div>
+                <div class="status-bottom">
+                    {{widget.content[0]}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

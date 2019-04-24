@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-title hr {
+    background-color: #ffc04b;
+}
+
+.col-md-4 {
+    text-align: center;
+    font-size: 26px;
+}
+
+.col-md-4:hover #resume {
+    color: green;
+}
+
+.col-md-4:hover #linkedin {
+    color: #0077b5;
+}
+
+.col-md-4:hover #github {
+    color: #6e5494;
+}
