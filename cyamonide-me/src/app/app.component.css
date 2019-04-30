@@ -7,7 +7,7 @@ app-banner {
 .spacer {
     height: 100px;
     background-color: transparent;
-    background-image: url('../assets/internals.jpg');
+    background-image: url('../assets/geometry.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
