@@ -10,7 +10,7 @@ a {
 }
 
 a:hover * {
-    color: #EEE;
+    color: #249885;
 }
 
 .section-title hr {
@@ -30,11 +30,12 @@ a:hover * {
 
 .content-before {
     margin: 0;
-    background-color: #33d6bbAA;
+    background-color: #33d6bb33;
     height: 140px;
     position: relative;
     z-index: -5;
     border-radius: 6px;
+    border: solid #33d6bb 2px;
 }
 
 .content-before * {
@@ -50,16 +51,18 @@ a:hover * {
 
 .content-wrapper:hover .content-before {
     height: 0;
+    border: none;
 }
 
 /* Second content pane */
 
 .content-after {
     margin: 0;
-    background-color: #33d6bb;
+    background-color: #96e3d6;
     height: 0px;
     position: relative;
     border-radius: 6px;
+    border: none;
 }
 
 .content-after * {
@@ -79,6 +82,7 @@ a:hover * {
 
 .content-wrapper:hover .content-after {
     height: 140px;
+    border: solid #33d6bb 2px;
 }
 
 .content-wrapper:hover .content-after * {

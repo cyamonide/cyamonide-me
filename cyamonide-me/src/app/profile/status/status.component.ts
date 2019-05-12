@@ -35,7 +35,7 @@ export class StatusComponent implements OnInit {
                 faIcon: "",
                 title: "Preparing for",
                 content: [
-                    "Google CodeJam 2019"
+                    "Google CodeJam 2019 Round 2"
                 ]
             },
             {
