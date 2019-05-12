@@ -91,12 +91,12 @@ export class InterestsComponent implements OnInit {
                 ]
             },
             {
-                name: "frc",
+                name: "first",
                 faIcon: "imgurl",
                 title: "FIRST Robotics",
                 content: [
                     {
-                        name: "frc-site",
+                        name: "frc",
                         title: "FRC",
                         url: "https://www.firstinspires.org/robotics/frc"
                     },
@@ -118,9 +118,19 @@ export class InterestsComponent implements OnInit {
                 title: "Music",
                 content: [
                     {
-                        name: "artists",
-                        title: "Artists",
-                        url: ""
+                        name: "music-logic",
+                        title: "Logic",
+                        url: "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L?si=hcpRC2LATnOixR5zafSBMg"
+                    },
+                    {
+                        name: "music-ludo",
+                        title: "Ludovico Einaudi",
+                        url: "https://open.spotify.com/artist/2uFUBdaVGtyMqckSeCl0Qj?si=ei0WB5xyRkyxFr-_-diaLQ"
+                    },
+                    {
+                        name: "music-joey",
+                        title: "Joey Pecoraro",
+                        url: "https://open.spotify.com/artist/44insiIQApkRaCMIbuaISJ?si=15HeIRwHSryV1Z1NxKctMQ"
                     }
                 ]
             },
