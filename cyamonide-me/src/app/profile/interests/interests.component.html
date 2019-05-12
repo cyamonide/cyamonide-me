@@ -5,15 +5,34 @@
     </div>
 
     <div class="container section-content">
-        My resume
-        My linkedin
-        F1
-        AUDL
-        GMBN
-        Danny MacAskill
-        LTT
-        Louis Rossman
-        Gee Milner
+        <div class="row">
+            <div class="col-xl-6" *ngFor="let widget of widgets">
 
+                <div class="content-wrapper">
+
+                    <div class="content-before">
+                        <div class="content-wrapper-1">
+                            <img src="../../../assets/interests/{{widget.name}}.png"><br>
+                            <p>{{widget.title}}</p>
+                        </div>
+                    </div>
+
+                    <div class="content-after">
+                        <div class="row">
+                            <div class="col" *ngFor="let subwidget of widget.content">
+                                <div class="content-wrapper-1">
+                                    <a href="{{subwidget.url}}" target="_blank">
+                                        <img src="../../../assets/interests/{{subwidget.name}}.png"><br>
+                                        <p>{{subwidget.title}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>

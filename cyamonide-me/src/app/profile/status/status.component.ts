@@ -27,7 +27,7 @@ export class StatusComponent implements OnInit {
                 faIcon: "",
                 title: "Not looking forward to",
                 content: [
-                    "wisdom teeth removal"
+                    "nothing at the moment"
                 ]
             },
             {
