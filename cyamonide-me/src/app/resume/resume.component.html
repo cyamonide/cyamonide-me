@@ -1,0 +1,47 @@
+<div class="container-fluid">
+
+    <div class="section">
+        <div class="section-title">
+            <h1 class="display-4">Resume</h1>
+            <hr>
+        </div>
+
+        <div class="row tabs">
+            <div class="col-4 tab-element">
+                <button (click)="setState(-1)">
+                    <div>
+                        <p>Minimalist</p>
+                    </div>
+                </button>
+            </div>
+            <div class="col-4 tab-element">
+                <button (click)="setState(0)">
+                    <div>
+                        <p>Just Right</p>
+                    </div>
+                </button>
+            </div>
+            <div class="col-4 tab-element">
+                <button (click)="setState(1)">
+                    <div>
+                        <p>Maximalist</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="container section-content">
+            <div>
+                <h3>Professional Experience</h3>
+                <div>
+                    <h4>Sunnybrook stuff</h4>
+                    <ul>
+                        <li class="content-max content-right">Did this to do that.</li>
+                        <li class="content-max">Used this to do that, achieving this.</li>
+                        <li class="content-max content-right content-min">Did some other cool stuff</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

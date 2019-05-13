@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { GithubComponent } from './github/github.component';
 import { HardwareComponent } from './hardware/hardware.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
     { path: 'profile', component: ProfileComponent },
     { path: 'github', component: GithubComponent },
+    { path: 'resume', component: ResumeComponent },
     { path: 'hardware', component: HardwareComponent }
 ];
 

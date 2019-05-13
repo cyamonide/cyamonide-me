@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ResumeComponent } from './resume.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ResumeComponent],
   imports: [
     CommonModule
   ]
