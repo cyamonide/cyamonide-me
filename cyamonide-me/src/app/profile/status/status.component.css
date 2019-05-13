@@ -26,6 +26,10 @@
     color: #555;
 }
 
+.status-bottom a {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
 .fa-file-alt {
     transform: rotate(-5deg);
 }
