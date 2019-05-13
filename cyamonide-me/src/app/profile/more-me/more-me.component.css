@@ -13,7 +13,7 @@ a {
 }
 
 .col-md-4:hover #resume * {
-    color: green;
+    color: #00ba4a;
 }
 
 .col-md-4:hover #linkedin * {

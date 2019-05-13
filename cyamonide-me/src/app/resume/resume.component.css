@@ -9,22 +9,37 @@ button p {
     margin: 0;
 }
 
+.section hr {
+    background-color: #00ba4a;
+}
+
+.section-content {
+    padding: 0 10px;
+}
+
+/* Tabs formatting */
+
 .tabs {
     margin: 0 30px;
 }
 
 .tab-element {
     padding: 0;
+    background-color: #00ba4a11;
 }
 
 .active {
-    background-color: red;
+    background-color: #00ba4a33;
 }
 
 /* Resume content */
 
 h3 {
     padding-left: 10px;
+}
+
+.resume-section {
+    margin: 30px auto;
 }
 
 .resume-subsection {
