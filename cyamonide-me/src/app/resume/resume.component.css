@@ -20,3 +20,26 @@ button p {
 .active {
     background-color: red;
 }
+
+/* Resume content */
+
+h3 {
+    padding-left: 10px;
+}
+
+.resume-subsection {
+    border-left: solid 1px black;
+}
+
+.resume-subsection .row {
+    margin: 10px 20px;
+}
+
+.resume-subsection .row ul {
+    margin: 0;
+}
+
+.resume-subsection .row p {
+    font-weight: bold;
+    text-align: right;
+}
