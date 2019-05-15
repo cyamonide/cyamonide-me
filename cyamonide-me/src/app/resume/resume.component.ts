@@ -65,11 +65,25 @@ export class ResumeComponent implements OnInit {
         }
     }
 
-    ngOnInit() {
+    removeAttrs() {
+        for (let i = 0; i < this.elements_min.length; i++) {
+            (<HTMLElement>this.elements_min[i]).removeAttribute('style');
+        }
+        for (let i = 0; i < this.elements_right.length; i++) {
+            (<HTMLElement>this.elements_right[i]).removeAttribute('style');
+        }
+        for (let i = 0; i < this.elements_max.length; i++) {
+            (<HTMLElement>this.elements_max[i]).removeAttribute('style');
+        }
+    }
+
+    getSizes() {
         this.elements_tabs = document.getElementsByClassName("tab-element");
         this.elements_min = document.getElementsByClassName("content-min");
         this.elements_right = document.getElementsByClassName("content-right");
         this.elements_max = document.getElementsByClassName("content-max");
+
+        this.removeAttrs();
 
         this.elements_min_heights = [];
         this.elements_right_heights = [];
@@ -85,6 +99,15 @@ export class ResumeComponent implements OnInit {
             this.elements_max_heights.push((<HTMLElement>this.elements_max[i]).clientHeight);
         }
 
+        this.setState(this.state);
+    }
+
+    onResize() {
+        this.getSizes();
+    }
+
+    ngOnInit() {
+        this.getSizes();
         this.setState(0);
     }
 
