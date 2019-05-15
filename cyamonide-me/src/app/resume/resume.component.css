@@ -34,7 +34,7 @@ button p {
 
 /* Resume content */
 
-h3 {
+h4 {
     padding-left: 10px;
 }
 
@@ -56,5 +56,14 @@ h3 {
 
 .resume-subsection .row p {
     font-weight: bold;
+    margin: 0;
+}
+
+.entry-position p {
+    text-align: left;
+}
+
+.entry-dates p {
     text-align: right;
 }
+
