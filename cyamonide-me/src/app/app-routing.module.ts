@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
+    { path: '', redirectTo: 'profile', pathMatch: 'full' },
     { path: 'profile', component: ProfileComponent },
     { path: 'github', component: GithubComponent },
     { path: 'resume', component: ResumeComponent },
@@ -13,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -5,11 +5,20 @@ app-banner {
 }
 
 .spacer {
-    height: 100px;
+    height: 50px;
     background-color: transparent;
     background-image: url('../assets/geometry.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.custom-navbar {
+    text-align: center;
+    position: fixed;
+    background-image: url('../assets/geometry.jpg');
+    height: 50px;
+    z-index: 50;
+    border-bottom: solid 2px grey;
 }
