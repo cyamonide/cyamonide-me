@@ -1,11 +1,11 @@
 require 'sinatra'
 
+Dir.chdir "cyamonide-me"
+
 post '/payload' do
     puts "Received payload."
     puts "Pulling..."
     `git pull`
-    puts "Changing dir..."
-    Dir.chdir "cyamonide-me"
     puts "Building..."
     `ng build --prod`
     puts "Removing old files..."
